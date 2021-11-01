@@ -16,10 +16,19 @@ body {
   color: var(--primary-text-color);
 }
 
+.action-button {
+  background-color: var(--brand-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
+}
+
 .hero {
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -70,19 +79,36 @@ body {
 
 .hero__call-to-action button {
   font-size: 32px;
-  background-color: var(--brand-color);
-  border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
-  cursor: pointer;
-  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.2);
 }
 
-.hero__call-to-action button:hover {
+.action-button:hover {
   filter: brightness(90%);
 }
 
-.hero__call-to-action button:active {
+.action-button:active {
   box-shadow: none;
   filter: brightness(87%);
+}
+
+.contact {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact__heading {
+  font-size: 32px;
+  color: var(--brand-color);
+}
+
+.contact__form-heading {
+  color: var(--brand-color);
+}
+
+.contact__info,
+.contact__form {
+  font-size: 24px;
+}
+
+.contact__form label {
+  font-weight: bold;
 }

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -50,8 +50,34 @@
             />
           </defs>
         </svg>
-        <div class="hero__call-to-action"><button>Contact Us</button></div>
+        <div class="hero__call-to-action">
+          <button class="action-button">Contact Us</button>
+        </div>
       </div>
+    </div>
+    <div class="contact">
+      <h2 class="contact__heading">Contact Us</h2>
+      <div class="contact__info">
+        <p><strong>Email:</strong> <em>Coming soon</em></p>
+        <p><strong>Phone:</strong> <em>Coming soon</em></p>
+      </div>
+      <h2 class="contact__form-heading">Or send us a message here!</h2>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        class="contact__form"
+      >
+        <p><label>Your Name: </label><input type="text" name="name" /></p>
+        <p><label>Your Email: </label><input type="email" name="email" /></p>
+        <p>
+          <label> What can we help you with? </label><br />
+          <textarea name="message"></textarea>
+        </p>
+        <p>
+          <button class="action-button" type="submit">Send</button>
+        </p>
+      </form>
     </div>
   </body>
 </html>
