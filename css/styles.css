@@ -66,8 +66,8 @@ body {
 
 .hero__image {
   transform: rotate(-45deg);
-  height: 35vh;
-  grid-area: image;
+  width: 95%;
+  height: 95%;
 }
 
 .hero__call-to-action {
@@ -113,13 +113,41 @@ body {
   font-weight: bold;
 }
 
+.hero__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  width: 100%;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 760px) {
   .hero__content {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 2fr 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "heading" "image"
-      "callToAction";
+      "heading"
+      "callToAction"
+      "image";
+    text-align: center;
+  }
+
+  .hero {
+    display: initial;
+  }
+
+  .hero__heading h1,
+  .hero__heading h2 {
+    word-wrap: break-word;
+  }
+
+  .hero__image-container {
+    height: 30vh;
+  }
+
+  .contact {
+    padding: 16px;
   }
 }
