@@ -11,8 +11,14 @@
 }
 
 body {
-  font-family: "Nunito", sans-serif;
   margin: 0;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Nunito", sans-serif;
   color: var(--primary-text-color);
 }
 
@@ -95,7 +101,8 @@ body {
   margin: 0 auto;
 }
 
-.contact__heading {
+.contact__heading,
+.media__heading {
   font-size: 32px;
   color: var(--brand-color);
 }
@@ -122,10 +129,42 @@ body {
   overflow: hidden;
 }
 
+.media {
+  max-width: 700px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.media__photos-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.media img {
+  box-shadow: 8px 9px 0 0 var(--brand-color);
+}
+
+.media img:last-of-type {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+input,
+textarea {
+  border: none;
+  border-bottom: 2px solid var(--brand-color);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 760px) {
   .hero__content {
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 1.25fr 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
       "heading"
@@ -149,5 +188,24 @@ body {
 
   .contact {
     padding: 16px;
+  }
+
+  .media,
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+
+  .media__photos-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+
+  .media img:last-of-type {
+    grid-column: unset;
+    justify-self: unset;
   }
 }

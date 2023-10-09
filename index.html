@@ -59,6 +59,39 @@
         </div>
       </div>
     </div>
+    <div class="media">
+      <h2 class="media__heading">Work</h2>
+      <div class="media__photos-container">
+        <image
+          class="media__image"
+          src="https://res.cloudinary.com/df3ikytgy/image/upload/w_425/q_auto/f_auto/v1696859120/bumble-bakery/lover-cake.jpg?"
+        ></image>
+        <image
+          class="media__image"
+          src="https://res.cloudinary.com/df3ikytgy/image/upload/w_425/q_auto/f_auto/v1696859120/bumble-bakery/sugar-cookies-1.jpg?"
+        ></image>
+        <image
+          class="media__image"
+          src="https://res.cloudinary.com/df3ikytgy/image/upload/w_425/q_auto/f_auto/v1696859120/bumble-bakery/sugar-cookies-2.jpg?"
+        ></image>
+        <image
+          class="media__image"
+          src="https://res.cloudinary.com/df3ikytgy/image/upload/w_425/q_auto/f_auto/v1696859120/bumble-bakery/sugar-cookies-3.jpg?"
+        ></image>
+        <image
+          class="media__image"
+          src="https://res.cloudinary.com/df3ikytgy/image/upload/w_425/q_auto/f_auto/v1696859120/bumble-bakery/taylor-swift-cupcakes-1.jpg?"
+        ></image>
+        <image
+          class="media__image"
+          src="https://res.cloudinary.com/df3ikytgy/image/upload/w_425/q_auto/f_auto/v1696859120/bumble-bakery/taylor-swift-cupcakes-2.jpg?"
+        ></image>
+        <image
+          class="media__image"
+          src="https://res.cloudinary.com/df3ikytgy/image/upload/w_425/q_auto/f_auto/v1696859120/bumble-bakery/bee-cake-1.jpg?"
+        ></image>
+      </div>
+    </div>
     <div class="contact" id="contact">
       <h2 class="contact__heading">Contact Us</h2>
       <div class="contact__info">
@@ -72,15 +105,19 @@
         data-netlify="true"
         class="contact__form"
       >
-        <p><label>Your Name: </label><input type="text" name="name" /></p>
-        <p><label>Your Email: </label><input type="email" name="email" /></p>
-        <p>
-          <label> What can we help you with? </label><br />
+        <p class="form-group">
+          <label>Your Name: </label>
+          <input type="text" name="name" placeholder="John Doe" />
+        </p>
+        <p class="form-group">
+          <label>Your Email: </label>
+          <input type="email" name="email" placeholder="john.doe@email.com" />
+        </p>
+        <p class="form-group">
+          <label> What can we help you with? </label>
           <textarea name="message"></textarea>
         </p>
-        <p>
-          <button class="action-button" type="submit">Send</button>
-        </p>
+        <button class="action-button" type="submit">Send</button>
       </form>
     </div>
   </body>
