@@ -144,9 +144,15 @@ textarea {
 
 .media img {
   box-shadow: 8px 9px 0 0 var(--brand-color);
+  transition: transform 0.1s ease-in-out;
 }
 
-.media img:last-of-type {
+.media img:hover {
+  transform: scale(1.05);
+  transition: transform 0.1 ease-in-out;
+}
+
+.media a:last-of-type {
   grid-column: span 2;
   justify-self: center;
 }
