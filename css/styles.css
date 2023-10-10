@@ -206,9 +206,9 @@ textarea {
   }
 
   .media__photos-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .media img:last-of-type {
