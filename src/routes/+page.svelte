@@ -4,8 +4,6 @@
   import Media from '../components/Media.svelte';
   import Contact from '../components/Contact.svelte';
   import Hero from '../components/Hero.svelte';
-
-  export const prerender = true;
 </script>
 
 <Hero />
