@@ -96,15 +96,26 @@ textarea {
   filter: brightness(87%);
 }
 
-.contact {
+/* .contact {
   max-width: 700px;
-  margin: 0 auto;
-}
+} */
 
 .contact__heading,
-.media__heading {
+.media__heading,
+.specialties__heading,
+.about__heading {
   font-size: 32px;
   color: var(--brand-color);
+  justify-self: start;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-width: fit-content;
+  max-width: 1100px;
+  justify-content: flex-start;
+  margin: 0 auto;
 }
 
 .contact__form-heading {
@@ -129,25 +140,51 @@ textarea {
   overflow: hidden;
 }
 
-.media {
+.media,
+.specialties {
   min-width: fit-content;
-  max-width: 700px;
+  /* max-width: 700px; */
   justify-content: center;
-  margin: 0 auto;
 }
 
-.media__photos-container {
+.media__photos-container,
+.specialties__list-container ul {
   display: grid;
+  text-align: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
+  width: 100%;
 }
 
-.media img {
+.specialties__list-container ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.specialties__list-container ul li {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.about__content-text__brand-emphasis {
+  color: var(--brand-color);
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.media img,
+.about img {
   box-shadow: 8px 9px 0 0 var(--brand-color);
   transition: transform 0.1s ease-in-out;
 }
 
-.media img:hover {
+.media img:hover,
+.about img:hover {
   transform: scale(1.05);
   transition: transform 0.1 ease-in-out;
 }
@@ -166,6 +203,23 @@ textarea {
 .form-group {
   display: flex;
   flex-direction: column;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.about__content p {
+  max-width: 700px;
+}
+
+.about__content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 760px) {
@@ -198,7 +252,9 @@ textarea {
   }
 
   .media,
-  .contact {
+  .contact,
+  .specialties,
+  .about {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,5 +270,13 @@ textarea {
   .media img:last-of-type {
     grid-column: unset;
     justify-self: unset;
+  }
+
+  .about__content {
+    flex-direction: column;
+  }
+
+  .specialties__list-container ul {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
